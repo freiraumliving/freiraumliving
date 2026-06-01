@@ -369,7 +369,7 @@ export default function App() {
           <div className="uppercase tracking-[0.4em] text-sm mb-6 opacity-80">Urlaub • Natur • Entspannung</div>
           <h1 className="text-5xl md:text-7xl font-light mb-8">Haus Freiraum</h1>
           <p className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-white/90">
-            Großzügiges Wohnen in perfekter Lage am Silbersee — stilvoll, modern und umgeben von Natur.
+            Urlaubsapartment in Villach – Ruhe, Natur und Komfort im Dreiländereck
           </p>
           <a href="#buchen" className="inline-flex items-center gap-2 mt-10 bg-white text-black px-8 py-4 rounded-full hover:bg-[#c9a84c] hover:text-white transition">
             Jetzt entdecken
