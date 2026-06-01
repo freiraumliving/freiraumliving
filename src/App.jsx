@@ -285,6 +285,11 @@ export default function App() {
   return (
     <div className="bg-[#f4f2ee] text-[#2b2b2b] min-h-screen">
 
+      {/* HINWEIS BANNER */}
+<div className="w-full bg-[#c9a84c] text-white text-center text-sm py-2 px-4 z-[60] relative">
+  🔧 Diese Website befindet sich noch im Aufbau — Fotos werden in Kürze durch aktuelle Aufnahmen ersetzt.
+</div>
+
       {showGallery && <GalleryOverlay />}
 
       {selectedImage && (
@@ -299,7 +304,7 @@ export default function App() {
       {showImpressum && (
         <Modal title="Impressum" onClose={() => setShowImpressum(false)}>
           <p><strong>Inhaberin:</strong><br />Noemi Orjan-Opitz<br />Widmanngasse 31<br />9500 Villach</p>
-          <p><strong>Ferienhaus:</strong><br />Haus Freiraum<br />Dorfstraße 6b<br />9524 Villach</p>
+          <p><strong>Ferienhausç:</strong><br />Haus Freiraum<br />Dorfstraße 6b<br />9524 Villach</p>
           <p><strong>E-Mail:</strong><br />info@freiraumliving.at</p>
         </Modal>
       )}
