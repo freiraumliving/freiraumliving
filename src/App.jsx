@@ -287,7 +287,7 @@ export default function App() {
 
       {/* HINWEIS BANNER */}
 <div className="w-full bg-[#c9a84c] text-white text-center text-sm py-3 px-4 relative z-[60]">
-  🔧 Diese Website befindet sich noch im Aufbau — Fotos werden in Kürze durch aktuelle Aufnahmen ersetzt.
+  🔧 Diese Website befindet sich noch im Aufbau — Fotos werden in Kürze durch aktuelle Aufnahmen ersetzt (Derzeit Beispielfotos!!).
 </div>
       {showGallery && <GalleryOverlay />}
 
