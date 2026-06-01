@@ -507,7 +507,7 @@ function ContactCard({ icon, title, text, href }) {
         {icon}
       </div>
       <h3 className="text-xl mb-3">{title}</h3>
-      <p className="text-white/70 hyphens-none">{text}</p>
+      <p className="text-white/70 break-words text-sm">{text}</p>
     </div>
   );
 
