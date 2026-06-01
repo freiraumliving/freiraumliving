@@ -286,10 +286,9 @@ export default function App() {
     <div className="bg-[#f4f2ee] text-[#2b2b2b] min-h-screen">
 
       {/* HINWEIS BANNER */}
-<div className="w-full bg-[#c9a84c] text-white text-center text-sm py-2 px-4 z-[60] relative">
+<div className="w-full bg-[#c9a84c] text-white text-center text-xs py-1.5 px-4 relative z-[60]">
   🔧 Diese Website befindet sich noch im Aufbau — Fotos werden in Kürze durch aktuelle Aufnahmen ersetzt.
 </div>
-
       {showGallery && <GalleryOverlay />}
 
       {selectedImage && (
@@ -317,7 +316,7 @@ export default function App() {
       )}
 
       {/* NAVBAR */}
-      <header className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-[#142a20]/50 text-white">
+   <header className="fixed top-[32px] left-0 w-full z-50 backdrop-blur-md bg-[#142a20]/50 text-white">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="text-2xl font-semibold tracking-wide">Freiraum Living</div>
 
