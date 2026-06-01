@@ -302,7 +302,7 @@ export default function App() {
 
       {showImpressum && (
         <Modal title="Impressum" onClose={() => setShowImpressum(false)}>
-          <p><strong>Inhaberin:</strong><br />Noemi Orjan-Opitz<br />Widmanngasse 31<br />9500 Villach</p>
+          <p><strong>Inhaberin:</strong><br />Noemi Opitz-Orjan<br />Widmanngasse 31<br />9500 Villach</p>
           <p><strong>Ferienhaus:</strong><br />Haus Freiraum<br />Dorfstraße 6b<br />9524 Villach</p>
           <p><strong>E-Mail:</strong><br />info@freiraumliving.at</p>
         </Modal>
