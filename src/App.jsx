@@ -359,7 +359,7 @@ export default function App() {
       )}
 
       {/* NAVBAR */}
-      <header className="fixed top-[44px] left-0 w-full z-50 bg-[#142a20] text-white">
+      <header className="fixed top-[44px] left-0 w-full z-50 bg-[#1e3a2f] text-white">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="text-2xl font-semibold tracking-wide">
             Freiraum Living
