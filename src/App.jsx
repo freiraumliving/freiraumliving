@@ -173,7 +173,7 @@ const GALLERY_CATEGORIES = [
 ];
 
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Dorfstra%C3%9Fe+6b,+9524+Villach";
-const INSTAGRAM_URL = "https://www.instagram.com/freiraum_urlaubsapartments?igsh=Mml6M3N4a3c0M2No&utm_source=qr";
+const INSTAGRAM_URL = "https://www.instagram.com/freiraum_urlaubsapartments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
 
 const navItems = [
   { label: "Haus", href: "#haus" },
