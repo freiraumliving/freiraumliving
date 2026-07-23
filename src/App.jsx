@@ -20,7 +20,6 @@ import wohn8 from "./assets/wohnbereich/wohn8.jpg";
 import wohn9 from "./assets/wohnbereich/wohn9.jpg";
 import wohn10 from "./assets/wohnbereich/wohn10.jpg";
 import wohn11 from "./assets/wohnbereich/wohn11.jpg";
-
 import wohn13 from "./assets/wohnbereich/wohn13.jpg";
 
 
@@ -60,6 +59,7 @@ import bad12 from "./assets/bad/bad12.jpg";
 import bad13, bad14 from "./assets/bad/bad13.jpg";
 import bad12 from "./assets/bad/bad12.jpg";
 import bad13, bad14 from "./assets/bad/bad13.jpg";
+import wohn12 from "./assets/wohnbereich/wohn12.jpg";
 
 // GARTEN & TERRASSE
 import garten1 from "./assets/garten_terrasse/garten1.jpg";
