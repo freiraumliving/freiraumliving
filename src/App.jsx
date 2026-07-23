@@ -66,28 +66,39 @@ import garten5 from "./assets/garten_terrasse/garten5.jpg";
 import garten6 from "./assets/garten_terrasse/garten6.jpg";
 import garten7 from "./assets/garten_terrasse/garten7.jpg";
 
+// ATMOSPHÄRE
+import deko1 from "./assets/atmosphaere/deko1.jpg";
+import deko2 from "./assets/atmosphaere/deko2.jpg";
+import deko3 from "./assets/atmosphaere/deko3.jpg";
+import deko4 from "./assets/atmosphaere/deko4.jpg";
+import deko5 from "./assets/atmosphaere/deko5.jpg";
+import deko6 from "./assets/atmosphaere/deko6.jpg";
+import deko7 from "./assets/atmosphaere/deko7.jpg";
+import deko8 from "./assets/atmosphaere/deko8.jpg";
+import deko9 from "./assets/atmosphaere/deko9.jpg";
+import deko10 from "./assets/atmosphaere/deko10.jpg";
+import deko11 from "./assets/atmosphaere/deko11.jpg";
+import deko12 from "./assets/atmosphaere/deko12.jpg";
+import deko13 from "./assets/atmosphaere/deko13.jpg";
+import deko14 from "./assets/atmosphaere/deko14.jpg";
+
 /* =========================================================
    SVG ICONS
 ========================================================= */
-
 function IconMail() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="4" width="20" height="16" rx="2" />
-      <polyline points="2,4 12,13 22,4" />
+      <rect x="2" y="4" width="20" height="16" rx="2" /><polyline points="2,4 12,13 22,4" />
     </svg>
   );
 }
-
 function IconMapPin() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-      <circle cx="12" cy="9" r="2.5" />
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" /><circle cx="12" cy="9" r="2.5" />
     </svg>
   );
 }
-
 function IconHeart() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -95,28 +106,20 @@ function IconHeart() {
     </svg>
   );
 }
-
 function IconWifi() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M5 12.55a11 11 0 0 1 14.08 0" />
-      <path d="M1.42 9a16 16 0 0 1 21.16 0" />
-      <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
-      <circle cx="12" cy="20" r="1" fill="currentColor" />
+      <path d="M5 12.55a11 11 0 0 1 14.08 0" /><path d="M1.42 9a16 16 0 0 1 21.16 0" /><path d="M8.53 16.11a6 6 0 0 1 6.95 0" /><circle cx="12" cy="20" r="1" fill="currentColor" />
     </svg>
   );
 }
-
 function IconCar() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M5 17H3v-5l2-5h14l2 5v5h-2" />
-      <circle cx="7.5" cy="17.5" r="2.5" />
-      <circle cx="16.5" cy="17.5" r="2.5" />
+      <path d="M5 17H3v-5l2-5h14l2 5v5h-2" /><circle cx="7.5" cy="17.5" r="2.5" /><circle cx="16.5" cy="17.5" r="2.5" />
     </svg>
   );
 }
-
 function IconTree() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -124,7 +127,6 @@ function IconTree() {
     </svg>
   );
 }
-
 function IconChevronRight() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -132,32 +134,24 @@ function IconChevronRight() {
     </svg>
   );
 }
-
 function IconX({ size = 24 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="18" y1="6" x2="6" y2="18" />
-      <line x1="6" y1="6" x2="18" y2="18" />
+      <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
     </svg>
   );
 }
-
 function IconMenu() {
   return (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="3" y1="6" x2="21" y2="6" />
-      <line x1="3" y1="12" x2="21" y2="12" />
-      <line x1="3" y1="18" x2="21" y2="18" />
+      <line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="18" x2="21" y2="18" />
     </svg>
   );
 }
-
 function IconInstagram({ size = 22 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-      <circle cx="12" cy="12" r="4" />
-      <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none" />
     </svg>
   );
 }
@@ -165,42 +159,17 @@ function IconInstagram({ size = 22 }) {
 /* =========================================================
    DATA
 ========================================================= */
-
-const HERO_IMAGES = [aussen1, aussen3, aussen4];
-
+const HERO_IMAGES = [garten2, garten3, aussen1];
 const DETAIL_IMAGE = wohn1;
 
 const GALLERY_CATEGORIES = [
-  {
-    id: "aussen",
-    label: "Außen",
-    images: [aussen1, aussen2, aussen3, aussen4, aussen5, aussen6],
-  },
-  {
-    id: "wohnbereich",
-    label: "Wohnbereich",
-    images: [wohn1, wohn2, wohn3, wohn4, wohn5, wohn6, wohn7, wohn8, wohn9, wohn10, wohn11, wohn12, wohn13, wohn14],
-  },
-  {
-    id: "kueche",
-    label: "Küche",
-    images: [kueche1, kueche2],
-  },
-  {
-    id: "schlafzimmer",
-    label: "Schlafzimmer",
-    images: [sz1, sz2, sz3, sz4, sz5, sz6, sz7, sz8, sz9, sz10, sz11, sz12, sz13, sz14],
-  },
-  {
-    id: "bad",
-    label: "Bad",
-    images: [bad1, bad2, bad3, bad4, bad5, bad6, bad7, bad8, bad9, bad10, bad11],
-  },
-  {
-    id: "garten",
-    label: "Garten & Terrasse",
-    images: [garten1, garten2, garten3, garten4, garten5, garten6, garten7],
-  },
+  { id: "aussen", label: "Außen", images: [aussen1, aussen2, aussen3, aussen4, aussen5, aussen6] },
+  { id: "wohnbereich", label: "Wohnbereich", images: [wohn1, wohn2, wohn3, wohn4, wohn5, wohn6, wohn7, wohn8, wohn9, wohn10, wohn11, wohn12, wohn13, wohn14] },
+  { id: "kueche", label: "Küche", images: [kueche1, kueche2] },
+  { id: "schlafzimmer", label: "Schlafzimmer", images: [sz1, sz2, sz3, sz4, sz5, sz6, sz7, sz8, sz9, sz10, sz11, sz12, sz13, sz14] },
+  { id: "bad", label: "Bad", images: [bad1, bad2, bad3, bad4, bad5, bad6, bad7, bad8, bad9, bad10, bad11] },
+  { id: "garten", label: "Garten & Terrasse", images: [garten1, garten2, garten3, garten4, garten5, garten6, garten7] },
+  { id: "atmosphaere", label: "Atmosphäre", images: [deko1, deko2, deko3, deko4, deko5, deko6, deko7, deko8, deko9, deko10, deko11, deko12, deko13, deko14] },
 ];
 
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Dorfstra%C3%9Fe+6b,+9524+Villach";
@@ -219,7 +188,6 @@ const navItems = [
 /* =========================================================
    CALENDAR
 ========================================================= */
-
 function SmoobuCalendar() {
   const initialized = useRef(false);
   useEffect(() => {
@@ -241,13 +209,11 @@ function SmoobuCalendar() {
   }, []);
   return (
     <div id="smoobuApartment3328252de" className="calendarWidget">
-      <div
-        className="calendarContent"
+      <div className="calendarContent"
         data-load-calendar-url="https://login.smoobu.com/de/cockpit/widget/single-calendar/3328252"
         data-verification="2ffbf504b33aad995902dd3280110493fc1c47af563a4625973f93b17e65f33c"
         data-baseUrl="https://login.smoobu.com"
-        data-disable-css="false"
-      />
+        data-disable-css="false" />
     </div>
   );
 }
@@ -255,7 +221,6 @@ function SmoobuCalendar() {
 /* =========================================================
    BOOKING
 ========================================================= */
-
 function SmoobuBooking() {
   const initialized = useRef(false);
   useEffect(() => {
@@ -266,16 +231,13 @@ function SmoobuBooking() {
     script.src = "https://login.smoobu.com/js/Settings/BookingToolIframe.js";
     document.body.appendChild(script);
     script.onload = () => {
-      window.BookingToolIframe &&
-        window.BookingToolIframe.initialize({
-          url: "https://login.smoobu.com/en/booking-tool/iframe/1754982",
-          baseUrl: "https://login.smoobu.com",
-          target: "#apartmentIframeAll",
-        });
+      window.BookingToolIframe && window.BookingToolIframe.initialize({
+        url: "https://login.smoobu.com/en/booking-tool/iframe/1754982",
+        baseUrl: "https://login.smoobu.com",
+        target: "#apartmentIframeAll",
+      });
     };
-    return () => {
-      if (document.body.contains(script)) document.body.removeChild(script);
-    };
+    return () => { if (document.body.contains(script)) document.body.removeChild(script); };
   }, []);
   return <div id="apartmentIframeAll" style={{ maxWidth: "650px", margin: "0 auto" }} />;
 }
@@ -283,23 +245,17 @@ function SmoobuBooking() {
 /* =========================================================
    MODAL
 ========================================================= */
-
 function Modal({ title, onClose, children }) {
   useEffect(() => {
     document.body.style.overflow = "hidden";
     const handleKeyDown = (e) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      document.body.style.overflow = "";
-      window.removeEventListener("keydown", handleKeyDown);
-    };
+    return () => { document.body.style.overflow = ""; window.removeEventListener("keydown", handleKeyDown); };
   }, [onClose]);
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 px-4">
       <div className="bg-white rounded-[2rem] max-w-2xl w-full max-h-[85vh] overflow-y-auto p-10 relative">
-        <button onClick={onClose} className="absolute top-6 right-6 text-gray-400 hover:text-black transition">
-          <IconX size={24} />
-        </button>
+        <button onClick={onClose} className="absolute top-6 right-6 text-gray-400 hover:text-black transition"><IconX size={24} /></button>
         <h2 className="text-3xl font-light mb-8 text-[#1e3a2f]">{title}</h2>
         <div className="text-[#444] leading-8 space-y-4 text-sm">{children}</div>
       </div>
@@ -310,7 +266,6 @@ function Modal({ title, onClose, children }) {
 /* =========================================================
    APP
 ========================================================= */
-
 export default function App() {
   const [showImpressum, setShowImpressum] = useState(false);
   const [showDatenschutz, setShowDatenschutz] = useState(false);
@@ -333,14 +288,9 @@ export default function App() {
 
       {/* LIGHTBOX */}
       {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black/95 z-[300] flex items-center justify-center p-6"
-          onClick={() => setSelectedImage(null)}
-        >
+        <div className="fixed inset-0 bg-black/95 z-[300] flex items-center justify-center p-6" onClick={() => setSelectedImage(null)}>
           <img src={selectedImage} alt="Großansicht" className="max-w-full max-h-full rounded-[2rem]" />
-          <button className="absolute top-6 right-6 text-white" onClick={() => setSelectedImage(null)}>
-            <IconX size={36} />
-          </button>
+          <button className="absolute top-6 right-6 text-white" onClick={() => setSelectedImage(null)}><IconX size={36} /></button>
         </div>
       )}
 
@@ -365,27 +315,17 @@ export default function App() {
           <div className="text-2xl font-semibold tracking-wide">Freiraum Living</div>
           <nav className="hidden md:flex items-center gap-8 text-sm uppercase tracking-wider">
             {navItems.map((item) => (
-              <a key={item.label} href={item.href} className="hover:text-[#c9a84c] transition">
-                {item.label}
-              </a>
+              <a key={item.label} href={item.href} className="hover:text-[#c9a84c] transition">{item.label}</a>
             ))}
-            <a href="#buchen" className="bg-[#c9a84c] text-white px-5 py-2 rounded-full hover:bg-white hover:text-black transition">
-              Jetzt buchen
-            </a>
-            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-[#c9a84c] transition" aria-label="Instagram">
-              <IconInstagram size={22} />
-            </a>
+            <a href="#buchen" className="bg-[#c9a84c] text-white px-5 py-2 rounded-full hover:bg-white hover:text-black transition">Jetzt buchen</a>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-[#c9a84c] transition" aria-label="Instagram"><IconInstagram size={22} /></a>
           </nav>
-          <button onClick={() => setMobileMenu(!mobileMenu)} className="md:hidden">
-            <IconMenu />
-          </button>
+          <button onClick={() => setMobileMenu(!mobileMenu)} className="md:hidden"><IconMenu /></button>
         </div>
         {mobileMenu && (
           <div className="md:hidden bg-[#142a20]/95 px-6 py-6 space-y-4">
             {navItems.map((item) => (
-              <a key={item.label} href={item.href} onClick={() => setMobileMenu(false)} className="block text-white/80 hover:text-[#c9a84c]">
-                {item.label}
-              </a>
+              <a key={item.label} href={item.href} onClick={() => setMobileMenu(false)} className="block text-white/80 hover:text-[#c9a84c]">{item.label}</a>
             ))}
             <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" onClick={() => setMobileMenu(false)} className="flex items-center gap-2 text-white/80 hover:text-[#c9a84c]">
               <IconInstagram size={18} /> Instagram
@@ -397,14 +337,11 @@ export default function App() {
       {/* HERO */}
       <section id="haus" className="relative h-screen flex items-center justify-center text-white overflow-hidden">
         {HERO_IMAGES.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt="Haus Freiraum"
+          <img key={index} src={image} alt="Haus Freiraum"
             className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[2000ms] ${heroIndex === index ? "opacity-100" : "opacity-0"}`}
           />
         ))}
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 text-center px-6">
           <div className="uppercase tracking-[0.4em] text-sm mb-6 opacity-80">Urlaub • Natur • Entspannung</div>
           <h1 className="text-5xl md:text-7xl font-light mb-8">Haus Freiraum</h1>
@@ -422,15 +359,9 @@ export default function App() {
         <div>
           <div className="uppercase text-sm tracking-[0.3em] text-[#c9a84c] mb-4">Willkommen</div>
           <h2 className="text-4xl md:text-5xl font-light mb-8 leading-tight">Ein Ort zum<br />Ankommen & Wohlfühlen</h2>
-          <p className="text-lg leading-8 text-[#555] mb-6">
-            Willkommen in unserem großzügigen Urlaubsapartment in Villach, betreut von Ihrer Gastgeberin Noémi Opitz-Orján.
-          </p>
-          <p className="text-lg leading-8 text-[#555] mb-6">
-            Das Apartment befindet sich in einer ruhigen, sonnigen Wohngegend und ist der ideale Ausgangspunkt für Erholung und Aktivitäten zu jeder Jahreszeit.
-          </p>
-          <p className="text-lg leading-8 text-[#555]">
-            Der kostenlose Badestrand am Silbersee ist bequem erreichbar, ebenso zahlreiche Rad- und Wanderwege.
-          </p>
+          <p className="text-lg leading-8 text-[#555] mb-6">Willkommen in unserem großzügigen Urlaubsapartment in Villach, betreut von Ihrer Gastgeberin Noémi Opitz-Orján.</p>
+          <p className="text-lg leading-8 text-[#555] mb-6">Das Apartment befindet sich in einer ruhigen, sonnigen Wohngegend und ist der ideale Ausgangspunkt für Erholung und Aktivitäten zu jeder Jahreszeit.</p>
+          <p className="text-lg leading-8 text-[#555]">Der kostenlose Badestrand am Silbersee ist bequem erreichbar, ebenso zahlreiche Rad- und Wanderwege.</p>
           <div className="grid grid-cols-2 gap-6 mt-10">
             <MiniFeature icon={<IconWifi />} text="Kostenloses WLAN" />
             <MiniFeature icon={<IconCar />} text="2 Parkplätze" />
@@ -449,7 +380,7 @@ export default function App() {
           <div className="uppercase text-sm tracking-[0.3em] text-[#c9a84c] mb-4">Lage</div>
           <h2 className="text-4xl md:text-5xl font-light mb-8">Perfekte Lage im Dreiländereck</h2>
           <p className="max-w-4xl mx-auto text-lg leading-8 text-[#555] mb-12">
-            Genießen Sie Ihren Urlaub im Herzen Kärntens, nahe dem Dreiländereck von Österreich, Italien und Slowenien.
+            Genießen Sie Ihren Urlaub im Herzen Kärntens, nahe dem Dreiländereck von Österreich, Italien und Slowenien. Entdecken Sie drei Länder während eines einzigen Urlaubs.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <InfoCard title="Sommer" text="Badestrand am Silbersee, Radwege, Wanderwege, Wassersport und viele Ausflugsziele in der Umgebung." />
@@ -465,9 +396,7 @@ export default function App() {
           <div className="text-center mb-16">
             <div className="uppercase text-sm tracking-[0.3em] text-[#c9a84c] mb-4">Ausstattung</div>
             <h2 className="text-4xl md:text-5xl font-light mb-6">Ausstattung des Apartments</h2>
-            <p className="text-[#666] max-w-3xl mx-auto text-lg leading-8">
-              128 m² mit großzügigen Räumen, moderner Ausstattung und allem was Sie für einen komfortablen Aufenthalt benötigen.
-            </p>
+            <p className="text-[#666] max-w-3xl mx-auto text-lg leading-8">128 m² mit großzügigen Räumen, moderner Ausstattung und allem was Sie für einen komfortablen Aufenthalt benötigen.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <DetailCard title="128 m²" text="Wohnfläche" />
@@ -488,9 +417,7 @@ export default function App() {
           <div>
             <div className="uppercase text-sm tracking-[0.3em] text-[#c9a84c] mb-4">Außenbereich</div>
             <h2 className="text-4xl md:text-5xl font-light mb-8">Garten & Entspannung</h2>
-            <p className="text-lg leading-8 text-[#555] mb-8">
-              Rund um das Apartment erwartet Sie ein ca. 200 m² großer Garten mit viel Platz zum Entspannen. Die Terrasse, Liegestühle und der Außenbereich laden zu ruhigen Stunden im Freien ein.
-            </p>
+            <p className="text-lg leading-8 text-[#555] mb-8">Rund um das Apartment erwartet Sie ein ca. 200 m² großer Garten mit viel Platz zum Entspannen. Die Terrasse, Liegestühle und der Außenbereich laden zu ruhigen Stunden im Freien ein.</p>
             <div className="grid md:grid-cols-2 gap-4">
               <CheckItem text="Ca. 200 m² Garten" />
               <CheckItem text="Grillmöglichkeit" />
@@ -514,38 +441,20 @@ export default function App() {
             <h2 className="text-4xl font-light mb-4">Fotogalerie</h2>
             <p className="text-[#666] max-w-2xl mx-auto">Entdecken Sie alle Räume und Bereiche von Haus Freiraum.</p>
           </div>
-
           {/* TABS */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {GALLERY_CATEGORIES.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveTab(cat.id)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition ${
-                  activeTab === cat.id
-                    ? "bg-[#1e3a2f] text-white"
-                    : "bg-[#f4f2ee] text-[#555] hover:bg-[#c9a84c] hover:text-white"
-                }`}
-              >
+              <button key={cat.id} onClick={() => setActiveTab(cat.id)}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition ${activeTab === cat.id ? "bg-[#1e3a2f] text-white" : "bg-[#f4f2ee] text-[#555] hover:bg-[#c9a84c] hover:text-white"}`}>
                 {cat.label}
               </button>
             ))}
           </div>
-
-          {/* FOTO GRID */}
+          {/* GRID */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {activeCategory?.images.map((image, index) => (
-              <div
-                key={index}
-                onClick={() => setSelectedImage(image)}
-                className="overflow-hidden rounded-[2rem] group cursor-pointer relative"
-              >
-                <img
-                  src={image}
-                  alt="Haus Freiraum"
-                  loading="lazy"
-                  className="w-full h-[280px] object-cover group-hover:scale-110 transition duration-700"
-                />
+              <div key={index} onClick={() => setSelectedImage(image)} className="overflow-hidden rounded-[2rem] group cursor-pointer relative">
+                <img src={image} alt="Haus Freiraum" loading="lazy" className="w-full h-[280px] object-cover group-hover:scale-110 transition duration-700" />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/30 transition" />
               </div>
             ))}
@@ -575,9 +484,7 @@ export default function App() {
             <h2 className="text-4xl font-light mb-6">Belegungskalender</h2>
             <p className="text-[#666] max-w-2xl mx-auto">Hier sehen Sie alle verfügbaren Termine auf einen Blick.</p>
           </div>
-          <div className="bg-white rounded-[2rem] p-8 shadow-lg">
-            <SmoobuCalendar />
-          </div>
+          <div className="bg-white rounded-[2rem] p-8 shadow-lg"><SmoobuCalendar /></div>
         </div>
       </section>
 
@@ -589,9 +496,7 @@ export default function App() {
             <h2 className="text-4xl font-light mb-6">Direkt online buchen</h2>
             <p className="text-[#666] max-w-2xl mx-auto">Wählen Sie Ihre Wunschdaten und buchen Sie direkt bei uns.</p>
           </div>
-          <div className="bg-white rounded-[2rem] shadow-xl p-8">
-            <SmoobuBooking />
-          </div>
+          <div className="bg-white rounded-[2rem] shadow-xl p-8"><SmoobuBooking /></div>
         </div>
       </section>
 
@@ -623,7 +528,6 @@ export default function App() {
 /* =========================================================
    COMPONENTS
 ========================================================= */
-
 function MiniFeature({ icon, text }) {
   return (
     <div className="flex items-center gap-4">
@@ -632,7 +536,6 @@ function MiniFeature({ icon, text }) {
     </div>
   );
 }
-
 function InfoCard({ title, text }) {
   return (
     <div className="bg-[#f4f2ee] rounded-[2rem] p-8 text-left shadow-sm">
@@ -641,7 +544,6 @@ function InfoCard({ title, text }) {
     </div>
   );
 }
-
 function DetailCard({ title, text }) {
   return (
     <div className="bg-white rounded-[1.5rem] p-8 text-center shadow-sm hover:shadow-lg transition">
@@ -650,7 +552,6 @@ function DetailCard({ title, text }) {
     </div>
   );
 }
-
 function CheckItem({ text }) {
   return (
     <div className="flex items-center gap-3 text-[#555] text-lg">
@@ -659,7 +560,6 @@ function CheckItem({ text }) {
     </div>
   );
 }
-
 function IncludedCard({ text }) {
   return (
     <div className="bg-white/10 border border-white/10 rounded-[1.5rem] p-6">
@@ -668,7 +568,6 @@ function IncludedCard({ text }) {
     </div>
   );
 }
-
 function ContactCard({ icon, title, text, href }) {
   const isExternal = href?.startsWith("http");
   const content = (
@@ -678,8 +577,6 @@ function ContactCard({ icon, title, text, href }) {
       <p className="text-white/70 break-words text-sm">{text}</p>
     </div>
   );
-  if (href) {
-    return <a href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noreferrer" : undefined}>{content}</a>;
-  }
+  if (href) return <a href={href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noreferrer" : undefined}>{content}</a>;
   return content;
 }
