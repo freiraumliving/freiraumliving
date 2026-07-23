@@ -405,7 +405,7 @@ export default function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <DetailCard title="128 m²" text="Wohnfläche" />
             <DetailCard title="3" text="Schlafzimmer" />
-            <DetailCard title="3" text="Badezimmer mit Dusche" />
+            <DetailCard title="2" text="Badezimmer mit Dusche" />
             <DetailCard title="1" text="Badezimmer mit Badewanne" />
             <DetailCard title="Terrasse" text="Große Terrasse zum Entspannen" />
             <DetailCard title="Küche" text="Voll ausgestattete Küche" />
