@@ -20,8 +20,6 @@ import wohn8 from "./assets/wohnbereich/wohn8.jpg";
 import wohn9 from "./assets/wohnbereich/wohn9.jpg";
 import wohn10 from "./assets/wohnbereich/wohn10.jpg";
 import wohn11 from "./assets/wohnbereich/wohn11.jpg";
-import wohn13 from "./assets/wohnbereich/wohn13.jpg";
-
 
 // KÜCHE
 import kueche1 from "./assets/kueche/kueche1.jpg";
@@ -56,10 +54,8 @@ import bad9 from "./assets/bad/bad9.jpg";
 import bad10 from "./assets/bad/bad10.jpg";
 import bad11 from "./assets/bad/bad11.jpg";
 import bad12 from "./assets/bad/bad12.jpg";
-import bad13, bad14 from "./assets/bad/bad13.jpg";
-import bad12 from "./assets/bad/bad12.jpg";
-import bad13, bad14 from "./assets/bad/bad13.jpg";
-import wohn12 from "./assets/wohnbereich/wohn12.jpg";
+import bad13 from "./assets/bad/bad13.jpg";
+import bad14 from "./assets/bad/bad14.jpg";
 
 // GARTEN & TERRASSE
 import garten1 from "./assets/garten_terrasse/garten1.jpg";
@@ -168,10 +164,10 @@ const DETAIL_IMAGE = wohn1;
 
 const GALLERY_CATEGORIES = [
   { id: "aussen", label: "Außen", images: [aussen1, aussen2, aussen3, aussen4, aussen5, aussen6] },
-  { id: "wohnbereich", label: "Wohnbereich", images: [wohn1, wohn2, wohn3, wohn4, wohn5, wohn6, wohn7, wohn8, wohn9, wohn10, wohn11, wohn13] },
+  { id: "wohnbereich", label: "Wohnbereich", images: [wohn1, wohn2, wohn3, wohn4, wohn5, wohn6, wohn7, wohn8, wohn9, wohn10, wohn11] },
   { id: "kueche", label: "Küche", images: [kueche1, kueche2] },
   { id: "schlafzimmer", label: "Schlafzimmer", images: [sz1, sz2, sz3, sz4, sz5, sz6, sz7, sz8, sz9, sz10, sz11, sz12, sz13, sz14] },
-  { id: "bad", label: "Bad", images: [bad1, bad2, bad3, bad4, bad5, bad6, bad7, bad8, bad9, bad10, bad11, bad12, bad13, bad14, bad12, wohn12] },
+  { id: "bad", label: "Bad", images: [bad1, bad2, bad3, bad4, bad5, bad6, bad7, bad8, bad9, bad10, bad11, bad12, bad13, bad14] },
   { id: "garten", label: "Garten & Terrasse", images: [garten1, garten2, garten3, garten4, garten5, garten6, garten7] },
   { id: "atmosphaere", label: "Atmosphäre", images: [deko1, deko2, deko3, deko4, deko5, deko6, deko7, deko8, deko9, deko10, deko11, deko12, deko13, deko14] },
 ];
@@ -189,9 +185,6 @@ const navItems = [
   { label: "Kontakt", href: "#kontakt" },
 ];
 
-/* =========================================================
-   CALENDAR
-========================================================= */
 function SmoobuCalendar() {
   const initialized = useRef(false);
   useEffect(() => {
@@ -222,9 +215,6 @@ function SmoobuCalendar() {
   );
 }
 
-/* =========================================================
-   BOOKING
-========================================================= */
 function SmoobuBooking() {
   const initialized = useRef(false);
   useEffect(() => {
@@ -246,9 +236,6 @@ function SmoobuBooking() {
   return <div id="apartmentIframeAll" style={{ maxWidth: "650px", margin: "0 auto" }} />;
 }
 
-/* =========================================================
-   MODAL
-========================================================= */
 function Modal({ title, onClose, children }) {
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -267,9 +254,6 @@ function Modal({ title, onClose, children }) {
   );
 }
 
-/* =========================================================
-   APP
-========================================================= */
 export default function App() {
   const [showImpressum, setShowImpressum] = useState(false);
   const [showDatenschutz, setShowDatenschutz] = useState(false);
@@ -290,7 +274,6 @@ export default function App() {
   return (
     <div className="bg-[#f4f2ee] text-[#2b2b2b] min-h-screen">
 
-      {/* LIGHTBOX */}
       {selectedImage && (
         <div className="fixed inset-0 bg-black/95 z-[300] flex items-center justify-center p-6" onClick={() => setSelectedImage(null)}>
           <img src={selectedImage} alt="Großansicht" className="max-w-full max-h-full rounded-[2rem]" />
@@ -313,7 +296,6 @@ export default function App() {
         </Modal>
       )}
 
-      {/* NAVBAR */}
       <header className="fixed top-0 left-0 w-full z-50 bg-[#142a20] text-white">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="text-2xl font-semibold tracking-wide">Freiraum Living</div>
@@ -322,7 +304,7 @@ export default function App() {
               <a key={item.label} href={item.href} className="hover:text-[#c9a84c] transition">{item.label}</a>
             ))}
             <a href="#buchen" className="bg-[#c9a84c] text-white px-5 py-2 rounded-full hover:bg-white hover:text-black transition">Jetzt buchen</a>
-            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-[#c9a84c] transition" aria-label="Instagram"><IconInstagram size={22} /></a>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-[#c9a84c] transition"><IconInstagram size={22} /></a>
           </nav>
           <button onClick={() => setMobileMenu(!mobileMenu)} className="md:hidden"><IconMenu /></button>
         </div>
@@ -338,7 +320,6 @@ export default function App() {
         )}
       </header>
 
-      {/* HERO */}
       <section id="haus" className="relative h-screen flex items-center justify-center text-white overflow-hidden">
         {HERO_IMAGES.map((image, index) => (
           <img key={index} src={image} alt="Haus Freiraum"
@@ -358,7 +339,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* BESCHREIBUNG */}
       <section id="beschreibung" className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
         <div>
           <div className="uppercase text-sm tracking-[0.3em] text-[#c9a84c] mb-4">Willkommen</div>
@@ -378,13 +358,12 @@ export default function App() {
         </div>
       </section>
 
-      {/* LAGE */}
       <section id="lage" className="bg-white py-24 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <div className="uppercase text-sm tracking-[0.3em] text-[#c9a84c] mb-4">Lage</div>
           <h2 className="text-4xl md:text-5xl font-light mb-8">Perfekte Lage im Dreiländereck</h2>
           <p className="max-w-4xl mx-auto text-lg leading-8 text-[#555] mb-12">
-            Genießen Sie Ihren Urlaub im Herzen Kärntens, nahe dem Dreiländereck von Österreich, Italien und Slowenien. Entdecken Sie drei Länder während eines einzigen Urlaubs.
+            Genießen Sie Ihren Urlaub im Herzen Kärntens, nahe dem Dreiländereck von Österreich, Italien und Slowenien.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             <InfoCard title="Sommer" text="Badestrand am Silbersee, Radwege, Wanderwege, Wassersport und viele Ausflugsziele in der Umgebung." />
@@ -394,7 +373,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* AUSSTATTUNG */}
       <section id="ausstattung" className="py-24 px-6 bg-[#f8f8f8]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -415,7 +393,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* GARTEN */}
       <section className="py-24 px-6">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div>
@@ -437,7 +414,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* GALERIE */}
       <section id="galerie" className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -445,7 +421,6 @@ export default function App() {
             <h2 className="text-4xl font-light mb-4">Fotogalerie</h2>
             <p className="text-[#666] max-w-2xl mx-auto">Entdecken Sie alle Räume und Bereiche von Haus Freiraum.</p>
           </div>
-          {/* TABS */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {GALLERY_CATEGORIES.map((cat) => (
               <button key={cat.id} onClick={() => setActiveTab(cat.id)}
@@ -454,7 +429,6 @@ export default function App() {
               </button>
             ))}
           </div>
-          {/* GRID */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {activeCategory?.images.map((image, index) => (
               <div key={index} onClick={() => setSelectedImage(image)} className="overflow-hidden rounded-[2rem] group cursor-pointer relative">
@@ -466,7 +440,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* INKLUSIVE */}
       <section className="bg-[#1e3a2f] text-white py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <div className="uppercase text-sm tracking-[0.3em] text-[#c9a84c] mb-4">Inklusive</div>
@@ -480,7 +453,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* KALENDER */}
       <section id="kalender" className="bg-[#f8f8f8] py-24 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
@@ -492,7 +464,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* BUCHUNG */}
       <section id="buchen" className="py-24 px-6">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-14">
@@ -504,7 +475,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* KONTAKT */}
       <section id="kontakt" className="bg-[#1e3a2f] text-white py-24 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <div className="uppercase text-sm tracking-[0.3em] text-[#c9a84c] mb-4">Kontakt</div>
@@ -517,7 +487,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* FOOTER */}
       <footer className="bg-[#142a20] text-white py-8 text-center text-sm tracking-wide">
         <p>© {new Date().getFullYear()} Haus Freiraum</p>
         <div className="mt-3 flex justify-center gap-6 text-white/50 text-xs">
@@ -529,9 +498,6 @@ export default function App() {
   );
 }
 
-/* =========================================================
-   COMPONENTS
-========================================================= */
 function MiniFeature({ icon, text }) {
   return (
     <div className="flex items-center gap-4">
