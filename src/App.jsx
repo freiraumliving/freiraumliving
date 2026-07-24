@@ -169,6 +169,7 @@ const GALLERY_CATEGORIES = [
   { id: "schlafzimmer", label: "Schlafzimmer", images: [sz1, sz2, sz3, sz4, sz5, sz6, sz7, sz8, sz9, sz10, sz11, sz12, sz13, sz14] },
   { id: "bad", label: "Bad", images: [bad1, bad2, bad3, bad4, bad5, bad6, bad7, bad8, bad9, bad10, bad11, bad12, bad13] },
   { id: "garten", label: "Garten & Terrasse", images: [garten1, garten2, garten3, garten4, garten5, garten6, garten7] },
+  { id: "aktivitaeten", label: "Aktivitäten", images: [] },
   { id: "atmosphaere", label: "Atmosphäre", images: [deko1, deko2, deko3, deko4, deko5, deko6, deko7, deko8, deko9, deko10, deko11, deko12, deko13, deko14, willkommensschild] },
 ];
 
