@@ -155,6 +155,13 @@ function IconInstagram({ size = 22 }) {
     </svg>
   );
 }
+function IconCreditCard({ size = 22 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" />
+    </svg>
+  );
+}
 
 /* =========================================================
    DATA
@@ -174,6 +181,7 @@ const GALLERY_CATEGORIES = [
 
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Dorfstra%C3%9Fe+6b,+9524+Villach";
 const INSTAGRAM_URL = "https://www.instagram.com/freiraum_urlaubsapartments?igsh=Mml6M3N4a3c0M2No&utm_source=qr";
+const PAYPAL_URL = "https://www.paypal.com/ncp/payment/FCSGSSYX7E9QE";
 
 const navItems = [
   { label: "Haus", href: "#haus" },
@@ -333,9 +341,14 @@ export default function App() {
           <p className="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-white/90">
             Großzügiges Urlaubsapartment in Villach – mit viel Platz, Komfort und perfekter Lage zwischen Bergen, Seen und im Dreiländereck.
           </p>
-          <a href="#beschreibung" className="inline-flex items-center gap-2 mt-10 bg-white text-black px-8 py-4 rounded-full hover:bg-[#c9a84c] hover:text-white transition">
-            Jetzt entdecken <IconChevronRight />
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-10">
+            <a href="#beschreibung" className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full hover:bg-[#c9a84c] hover:text-white transition">
+              Jetzt entdecken <IconChevronRight />
+            </a>
+            <a href={PAYPAL_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-white text-white px-8 py-4 rounded-full hover:bg-[#c9a84c] hover:border-[#c9a84c] transition">
+              Per PayPal bezahlen <IconCreditCard />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -475,14 +488,26 @@ export default function App() {
         </div>
       </section>
 
+      <section id="paypal" className="bg-white py-24 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="uppercase text-sm tracking-[0.3em] text-[#c9a84c] mb-4">Zahlung</div>
+          <h2 className="text-4xl font-light mb-6">Bequem per PayPal bezahlen</h2>
+          <p className="text-[#666] max-w-2xl mx-auto mb-10">Sie möchten Ihre Buchung direkt begleichen? Nutzen Sie ganz einfach unseren sicheren PayPal-Zahlungslink.</p>
+          <a href={PAYPAL_URL} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-[#142a20] text-white px-10 py-4 rounded-full hover:bg-[#c9a84c] transition">
+            Jetzt per PayPal bezahlen <IconChevronRight />
+          </a>
+        </div>
+      </section>
+
       <section id="kontakt" className="bg-[#1e3a2f] text-white py-24 px-6">
         <div className="max-w-5xl mx-auto text-center">
           <div className="uppercase text-sm tracking-[0.3em] text-[#c9a84c] mb-4">Kontakt</div>
           <h2 className="text-4xl font-light mb-10">Wir freuen uns auf Ihre Anfrage</h2>
-          <div className="grid md:grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16 max-w-5xl mx-auto">
             <ContactCard icon={<IconMail />} title="E-Mail" text="info@freiraumliving.at" href="mailto:info@freiraumliving.at" />
             <ContactCard icon={<IconMapPin />} title="Adresse" text="Dorfstraße 6b, 9524 Villach" href={GOOGLE_MAPS_URL} />
             <ContactCard icon={<IconInstagram />} title="Instagram" text="@freiraum_urlaubsapartments" href={INSTAGRAM_URL} />
+            <ContactCard icon={<IconCreditCard />} title="PayPal" text="Direkt online bezahlen" href={PAYPAL_URL} />
           </div>
         </div>
       </section>
