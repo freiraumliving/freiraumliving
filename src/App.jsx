@@ -80,6 +80,7 @@ import deko11 from "./assets/atmosphaere/deko11.jpg";
 import deko12 from "./assets/atmosphaere/deko12.jpg";
 import deko13 from "./assets/atmosphaere/deko13.jpg";
 import deko14 from "./assets/atmosphaere/deko14.jpg";
+import willkommensschild from "./assets/atmosphaere/willkommensschild.jpg";
 
 /* =========================================================
    SVG ICONS
@@ -147,6 +148,30 @@ function IconMenu() {
     </svg>
   );
 }
+function IconHouse() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M3 11l9-8 9 8" /><path d="M5 10v10a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V10" />
+    </svg>
+  );
+}
+function IconPaw() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="7" cy="9" r="2" /><circle cx="12" cy="6.5" r="2" /><circle cx="17" cy="9" r="2" />
+      <path d="M8.5 14c0-2 1.5-3 3.5-3s3.5 1 3.5 3c0 2.2-1.8 3-3.5 3s-3.5-.8-3.5-3z" /><circle cx="4.5" cy="13.5" r="1.8" />
+      <circle cx="19.5" cy="13.5" r="1.8" />
+    </svg>
+  );
+}
+function IconDocument() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" /><path d="M14 2v6h6" />
+      <line x1="8" y1="13" x2="16" y2="13" /><line x1="8" y1="17" x2="16" y2="17" />
+    </svg>
+  );
+}
 function IconInstagram({ size = 22 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -175,11 +200,11 @@ const GALLERY_CATEGORIES = [
   { id: "schlafzimmer", label: "Schlafzimmer", images: [sz1, sz2, sz3, sz4, sz5, sz6, sz7, sz8, sz9, sz10, sz11, sz12, sz13, sz14] },
   { id: "bad", label: "Bad", images: [bad1, bad2, bad3, bad4, bad5, bad6, bad7, bad8, bad9, bad10, bad11, bad12, bad13] },
   { id: "garten", label: "Garten & Terrasse", images: [garten1, garten2, garten3, garten4, garten5, garten6, garten7] },
-  { id: "atmosphaere", label: "Atmosphäre", images: [deko1, deko2, deko3, deko4, deko5, deko6, deko7, deko8, deko9, deko10, deko11, deko12, deko13, deko14] },
+  { id: "atmosphaere", label: "Atmosphäre", images: [deko1, deko2, deko3, deko4, deko5, deko6, deko7, deko8, deko9, deko10, deko11, deko12, deko13, deko14, willkommensschild] },
 ];
 
 const GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Dorfstra%C3%9Fe+6b,+9524+Villach";
-const INSTAGRAM_URL = "https://www.instagram.com/freiraum_urlaubsapartments?igsh=Mml6M3N4a3c0M2No&utm_source=qr";
+const INSTAGRAM_URL = "https://www.instagram.com/freiraum_urlaubsapartments?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
 const PAYPAL_URL = "https://www.paypal.com/ncp/payment/FCSGSSYX7E9QE";
 
 const navItems = [
@@ -264,6 +289,9 @@ function Modal({ title, onClose, children }) {
 export default function App() {
   const [showImpressum, setShowImpressum] = useState(false);
   const [showDatenschutz, setShowDatenschutz] = useState(false);
+  const [showHausregeln, setShowHausregeln] = useState(false);
+  const [showHaustierregeln, setShowHaustierregeln] = useState(false);
+  const [showVorschriften, setShowVorschriften] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [heroIndex, setHeroIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -300,6 +328,128 @@ export default function App() {
         <Modal title="Datenschutz" onClose={() => setShowDatenschutz(false)}>
           <p>Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen.</p>
           <p>Buchungsdaten werden ausschließlich zur Abwicklung Ihrer Reservierung verarbeitet.</p>
+        </Modal>
+      )}
+
+      {showHausregeln && (
+        <Modal title="Hausregeln" onClose={() => setShowHausregeln(false)}>
+          <p>Wir haben dieses Apartment mit viel Liebe zum Detail eingerichtet und hoffen, dass ihr euch hier rundum wohlfühlt. Damit sich alle Gäste gleichermaßen entspannen können, bitten wir euch, die folgenden Hinweise zu beachten.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Belegung</h3>
+          <p>In der Unterkunft dürfen ausschließlich die in der Buchung angegebenen Gäste übernachten. Der Empfang weiterer Besucher ist nicht gestattet.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Ruhige Abende</h3>
+          <p>Bitte nehmt ab 22:00 Uhr Rücksicht auf die Nachbarn und achtet auf die Nachtruhe.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Rauchen</h3>
+          <p>Rauchen ist ausschließlich im Außenbereich gestattet. Bitte verwendet auch keine E-Zigaretten im Haus.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Brandschutz</h3>
+          <p>Aus Brandschutzgründen sind offenes Feuer, Kerzen und Räucherstäbchen im Haus nicht erlaubt. Grillen ist ausschließlich an der dafür vorgesehenen Grillstelle erlaubt, sofern ihr das 18. Lebensjahr vollendet habt und die geltenden Brandschutzbestimmungen einhaltet.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Schlüssel</h3>
+          <p>Bitte geht sorgfältig mit dem Schlüssel um. Die Kosten für den Ersatz eines verlorenen Schlüssels trägt der Gast.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Selbstständiger Check-in und Check-out</h3>
+          <p>Der Check-in und Check-out erfolgen selbstständig. Die entsprechenden Informationen erhaltet ihr vor eurer Anreise.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Bitte behandelt das Haus mit Sorgfalt</h3>
+          <p>Im Haus befinden sich zahlreiche individuell angefertigte Möbel und Designobjekte. Bitte behandelt diese mit besonderer Sorgfalt. Sollte dennoch einmal etwas beschädigt werden oder nicht funktionieren, informiert uns bitte umgehend – gemeinsam finden wir eine Lösung.</p>
+          <p>Bitte benutzt Möbel, Geräte und elektrische Anlagen ausschließlich bestimmungsgemäß, um Unfälle und Schäden zu vermeiden. Sollte sich jemand verletzen, informiert uns bitte sofort. Einen Erste-Hilfe-Kasten sowie den Feuerlöscher findet ihr neben der Eingangstür.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">WLAN</h3>
+          <p>Das WLAN steht euch kostenlos zur Verfügung. Bitte nutzt es verantwortungsvoll und ausschließlich im Rahmen der geltenden gesetzlichen Bestimmungen.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Kinder und Haustiere</h3>
+          <p>Kinder unter 14 Jahren dürfen sich nur in Begleitung und unter Aufsicht eines Erwachsenen in der Unterkunft aufhalten.</p>
+          <p>Vierbeinige Gäste sind bei uns herzlich willkommen. Für sie stehen ein großer Garten sowie ausreichend Platz zur Verfügung. Bitte haltet den Garten sauber. Eine Betreuung von Haustieren können wir leider nicht anbieten. Bitte lasst Hunde nicht auf Betten oder Polstermöbel.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Was nicht erlaubt ist</h3>
+          <p>Jegliche illegale Aktivitäten sowie der Besitz, die Lagerung oder der Konsum verbotener Substanzen sind im Haus und auf dem gesamten Grundstück streng untersagt.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Vor der Abreise</h3>
+          <p>Wir erwarten keine Grundreinigung. Es genügt, wenn ihr:</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>das Haus in einem ordentlichen Zustand hinterlasst,</li>
+            <li>den Müll in die dafür vorgesehenen Mülltonnen entsorgt.</li>
+          </ul>
+          <p>Bei Aufenthalten von zwei Wochen oder länger kann auf Wunsch eine Zwischenreinigung inklusive Handtuch- und Bettwäschewechsel gegen einen Aufpreis von 120 € gebucht werden.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Check-in & Check-out</h3>
+          <p>Check-in: ab 15:00 Uhr<br />Check-out: bis 10:00 Uhr, damit wir alles für die nächsten Gäste vorbereiten können.</p>
+
+          <p className="mt-6">Vielen Dank, dass ihr unsere Hausregeln beachtet. Wir wünschen euch einen angenehmen Aufenthalt und eine erholsame Zeit im Freiraum!</p>
+        </Modal>
+      )}
+
+      {showHaustierregeln && (
+        <Modal title="Haustierregeln" onClose={() => setShowHaustierregeln(false)}>
+          <p>Liebe Gäste, wir freuen uns sehr, dass ihr gemeinsam mit eurem vierbeinigen Familienmitglied bei uns zu Gast seid. Damit sich alle Gäste wohlfühlen und ihren Aufenthalt in Ruhe genießen können, bitten wir euch, die folgenden Hinweise zu beachten.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Allgemeine Hinweise</h3>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Unsere Unterkunft ist hundefreundlich. Haustiere sind nach vorheriger Absprache herzlich willkommen.</li>
+            <li>Es dürfen ausschließlich gut erzogene, an Menschen gewöhnte und entsprechend sozialisierte Haustiere mitgebracht werden.</li>
+            <li>Bitte stellt sicher, dass die Impfungen eures Haustieres gültig sind und der Parasitenschutz aktuell ist.</li>
+            <li>Für das Verhalten des Haustieres sowie für eventuell entstandene Schäden haftet der Halter in vollem Umfang.</li>
+          </ul>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Nutzung der Unterkunft</h3>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Haustiere dürfen nicht unbeaufsichtigt in der Unterkunft zurückgelassen werden.</li>
+            <li>Bitte lasst eure Vierbeiner nicht auf Betten, Sofas oder andere Polstermöbel.</li>
+            <li>Achtet bitte darauf, übermäßiges Bellen oder Lärm – besonders in den Abend- und Nachtstunden – zu vermeiden.</li>
+            <li>Für Futter und Wasser verwendet bitte die eigenen Futter- und Wassernäpfe eures Haustieres.</li>
+          </ul>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Sauberkeit und Rücksichtnahme</h3>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Bitte entfernt die Hinterlassenschaften eures Haustieres sowohl im Garten als auch in der Umgebung.</li>
+            <li>Bei nassen oder schmutzigen Pfoten bitten wir euch, diese vor dem Betreten des Hauses abzuwischen.</li>
+            <li>Sollte aufgrund von Verschmutzungen oder Beschädigungen eine zusätzliche Reinigung oder Reparatur erforderlich sein, behalten wir uns vor, die entstandenen Kosten nachträglich in Rechnung zu stellen.</li>
+          </ul>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">Sicherheit</h3>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Die Unterkunft liegt inmitten der Natur. Achtet deshalb bitte besonders auf Zecken sowie auf frei lebende Wildtiere.</li>
+            <li>Für die Sicherheit und das Wohlbefinden eures Haustieres seid ihr während des gesamten Aufenthalts selbst verantwortlich.</li>
+          </ul>
+
+          <p className="mt-6">Vielen Dank für eure Rücksichtnahme und eure Unterstützung. Wir wünschen euch und eurem vierbeinigen Begleiter einen erholsamen Aufenthalt und viele schöne gemeinsame Momente im Freiraum! 🐾</p>
+        </Modal>
+      )}
+
+      {showVorschriften && (
+        <Modal title="Vorschriften und Regeln" onClose={() => setShowVorschriften(false)}>
+          <h3 className="text-lg font-medium text-[#1e3a2f] mb-2">1. An- und Abreise</h3>
+          <p>Check-in: ab 15:00 Uhr<br />Check-out: bis 10:00 Uhr</p>
+          <p>Abweichende An- oder Abreisezeiten sind ausschließlich nach vorheriger Absprache möglich.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">2. Hausordnung</h3>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Die Unterkunft darf ausschließlich von den in der Buchung angegebenen Gästen genutzt werden.</li>
+            <li>Die Gäste sind verpflichtet, die Einrichtung und Ausstattung der Unterkunft sorgfältig und bestimmungsgemäß zu nutzen.</li>
+            <li>Für sämtliche während des Aufenthalts verursachten Schäden haftet der Gast in vollem Umfang.</li>
+            <li>Um die Ruhe der Nachbarschaft zu gewährleisten, bitten wir, zwischen 22:00 Uhr und 08:00 Uhr auf laute Aktivitäten zu verzichten.</li>
+            <li>Jegliche Aktivitäten, die gegen geltendes Recht verstoßen oder die Ruhe anderer beeinträchtigen, sind in der Unterkunft untersagt.</li>
+          </ul>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">3. Haustiere</h3>
+          <p>Das Freiraum ist eine hundefreundliche Unterkunft.</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Es dürfen ausschließlich gut erzogene, an den Umgang mit Menschen gewöhnte und entsprechend sozialisierte Haustiere mitgebracht werden.</li>
+            <li>Für Schäden, Verunreinigungen oder Verletzungen, die durch das Haustier verursacht werden, haftet der Halter in vollem Umfang.</li>
+            <li>Haustiere dürfen nicht unbeaufsichtigt in der Unterkunft zurückgelassen werden, sofern dadurch Schäden an der Unterkunft oder Beeinträchtigungen der Umgebung entstehen können.</li>
+          </ul>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">4. Haftung</h3>
+          <p>Der Gastgeber übernimmt keine Haftung für Wertgegenstände, Bargeld oder persönliche Gegenstände, die von den Gästen in die Unterkunft mitgebracht werden.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">5. Höhere Gewalt</h3>
+          <p>Der Gastgeber haftet nicht für unvorhersehbare und unabwendbare Ereignisse (z. B. Naturkatastrophen, Ausfälle der Versorgungsleistungen oder behördliche Maßnahmen), die die Erbringung der gebuchten Leistungen ganz oder teilweise verhindern.</p>
+
+          <h3 className="text-lg font-medium text-[#1e3a2f] mt-6 mb-2">6. Datenschutz</h3>
+          <p>Die im Rahmen der Buchung erhobenen personenbezogenen Daten werden gemäß der jeweils gültigen Datenschutzerklärung verarbeitet.</p>
         </Modal>
       )}
 
@@ -357,7 +507,7 @@ export default function App() {
           <h2 className="text-4xl md:text-5xl font-light mb-8 leading-tight">Ein Ort zum<br />Ankommen & Wohlfühlen</h2>
           <p className="text-lg leading-8 text-[#555] mb-6">Willkommen in unserem großzügigen Urlaubsapartment in Villach, betreut von Ihrer Gastgeberin Noémi Opitz-Orján.</p>
           <p className="text-lg leading-8 text-[#555] mb-6">Das Apartment befindet sich in einer ruhigen, sonnigen Wohngegend und ist der ideale Ausgangspunkt für Erholung und Aktivitäten zu jeder Jahreszeit.</p>
-          <p className="text-lg leading-8 text-[#555]">Der kostenlose Badestrand am Silbersee ist bequem erreichbar, ebenso zahlreiche Rad- und Wanderwege.</p>
+          <p className="text-lg leading-8 text-[#555]">Der kostenlose Badestrand am Silbersee liegt nur ca. 400 Meter entfernt und ist bequem zu Fuß erreichbar, ebenso zahlreiche Rad- und Wanderwege.</p>
           <div className="grid grid-cols-2 gap-6 mt-10">
             <MiniFeature icon={<IconWifi />} text="Kostenloses WLAN" />
             <MiniFeature icon={<IconCar />} text="2 Parkplätze" />
@@ -378,7 +528,7 @@ export default function App() {
             Genießen Sie Ihren Urlaub im Herzen Kärntens, nahe dem Dreiländereck von Österreich, Italien und Slowenien.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <InfoCard title="Sommer" text="Badestrand am Silbersee, Radwege, Wanderwege, Wassersport und viele Ausflugsziele in der Umgebung." />
+            <InfoCard title="Sommer" text="Badestrand am Silbersee (ca. 400 m entfernt), Radwege, Wanderwege, Wassersport und viele Ausflugsziele in der Umgebung." />
             <InfoCard title="Winter" text="Die Gerlitzen Alpe erreichen Sie in etwa 15 Minuten mit dem Auto – ideal für Skifahrer und Winterurlauber." />
             <InfoCard title="Dreiländereck" text="Österreich, Italien und Slowenien liegen nahe beieinander und bieten Kultur, Kulinarik, Berge und Seen." />
           </div>
@@ -511,9 +661,21 @@ export default function App() {
         </div>
       </section>
 
+      <section className="bg-[#1e3a2f] text-white py-24 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="uppercase text-sm tracking-[0.3em] text-[#c9a84c] mb-4">Informationen</div>
+          <h2 className="text-4xl font-light mb-10">Regeln & Vorschriften</h2>
+          <div className="grid md:grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto">
+            <RuleCard icon={<IconHouse />} title="Hausregeln" onClick={() => setShowHausregeln(true)} />
+            <RuleCard icon={<IconPaw />} title="Haustierregeln" onClick={() => setShowHaustierregeln(true)} />
+            <RuleCard icon={<IconDocument />} title="Vorschriften und Regeln" onClick={() => setShowVorschriften(true)} />
+          </div>
+        </div>
+      </section>
+
       <footer className="bg-[#142a20] text-white py-8 text-center text-sm tracking-wide">
         <p>© {new Date().getFullYear()} Haus Freiraum</p>
-        <div className="mt-3 flex justify-center gap-6 text-white/50 text-xs">
+        <div className="mt-3 flex flex-wrap justify-center gap-6 text-white/50 text-xs">
           <button onClick={() => setShowImpressum(true)} className="hover:text-white transition">Impressum</button>
           <button onClick={() => setShowDatenschutz(true)} className="hover:text-white transition">Datenschutz</button>
         </div>
@@ -560,6 +722,14 @@ function IncludedCard({ text }) {
       <div className="text-2xl mb-3">✓</div>
       <p>{text}</p>
     </div>
+  );
+}
+function RuleCard({ icon, title, onClick }) {
+  return (
+    <button onClick={onClick} className="w-full text-left bg-white/5 border border-white/10 rounded-[1.5rem] p-8 hover:bg-white/10 transition">
+      <div className="w-14 h-14 rounded-full bg-[#c9a84c]/20 flex items-center justify-center mx-auto mb-6 text-[#c9a84c]">{icon}</div>
+      <h3 className="text-xl text-center">{title}</h3>
+    </button>
   );
 }
 function ContactCard({ icon, title, text, href }) {
