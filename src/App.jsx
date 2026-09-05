@@ -55,7 +55,6 @@ import bad10 from "./assets/bad/bad10.jpg";
 import bad11 from "./assets/bad/bad11.jpg";
 import bad12 from "./assets/bad/bad12.jpg";
 import bad13 from "./assets/bad/bad13.jpg";
-import bad14 from "./assets/bad/bad14.jpg";
 
 // GARTEN & TERRASSE
 import garten1 from "./assets/garten_terrasse/garten1.jpg";
@@ -174,7 +173,7 @@ const GALLERY_CATEGORIES = [
   { id: "wohnbereich", label: "Wohnbereich", images: [wohn1, wohn2, wohn3, wohn4, wohn5, wohn6, wohn7, wohn8, wohn9, wohn10, wohn11] },
   { id: "kueche", label: "Küche", images: [kueche1, kueche2] },
   { id: "schlafzimmer", label: "Schlafzimmer", images: [sz1, sz2, sz3, sz4, sz5, sz6, sz7, sz8, sz9, sz10, sz11, sz12, sz13, sz14] },
-  { id: "bad", label: "Bad", images: [bad1, bad2, bad3, bad4, bad5, bad6, bad7, bad8, bad9, bad10, bad11, bad12, bad13, bad14] },
+  { id: "bad", label: "Bad", images: [bad1, bad2, bad3, bad4, bad5, bad6, bad7, bad8, bad9, bad10, bad11, bad12, bad13] },
   { id: "garten", label: "Garten & Terrasse", images: [garten1, garten2, garten3, garten4, garten5, garten6, garten7] },
   { id: "atmosphaere", label: "Atmosphäre", images: [deko1, deko2, deko3, deko4, deko5, deko6, deko7, deko8, deko9, deko10, deko11, deko12, deko13, deko14] },
 ];
